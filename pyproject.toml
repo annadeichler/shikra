@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shikra"
+version = "0.0.0"
+description = "Minimal Shikra wrapper for VLM eval"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",          # already in your env
+  "transformers",   # already pinned in your env
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+[tool.setuptools.packages.find]
+where = ["."]
